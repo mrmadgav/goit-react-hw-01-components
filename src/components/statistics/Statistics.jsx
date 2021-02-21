@@ -9,14 +9,7 @@ const statisticalData = ({ title, stats }) => {
       <ul className="stat-list">
         {stats.map((item) => {
           return (
-            <li
-              className="stat-item"
-              key={item.id}
-              style={{
-                backgroundColor:
-                  "#" + Math.floor(Math.random() * 16777215).toString(16),
-              }}
-            >
+            <li className="stat-item" key={item.id} style={randomColor()}>
               <span className="stat-label">{item.label}</span>
               <span className="stat-percentage"> {item.percentage}%</span>
             </li>
@@ -41,7 +34,8 @@ statisticalData.propTypes = PropTypes.arrayOf(
   })
 ).isRequired;
 
-// function randomColor() {
-//   return (this.backgroundcolor =
-//     "#" + Math.floor(Math.random() * 16777215).toString(16));
-// }
+function randomColor() {
+  return {
+    background: "#" + Math.floor(Math.random() * 16777215).toString(16),
+  };
+}
