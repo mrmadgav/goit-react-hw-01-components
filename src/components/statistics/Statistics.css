@@ -1,0 +1,22 @@
+.stat-list {
+  display: flex;
+  list-style-type: none;
+  max-width: 380px;
+  margin-left: 27px;
+  padding: 1em;
+  box-shadow: -20px 20px 0 -17px #fff, 20px -20px 0 -17px #fff,
+    20px 20px 0 -20px #c27153, 0 0 0 2px #c27153;
+}
+.stat-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.stat-item {
+  padding: 20px;
+  color: white;
+}
+.stat-title {
+  margin-left: 150px;
+  color: slategray;
+}

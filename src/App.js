@@ -7,6 +7,7 @@ import FriendList from "./components/friendList/FriendList.jsx";
 import friends from "./JSONbases/friends.json";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
 import transactions from "./JSONbases/transactons.json";
+import 'modern-normalize/modern-normalize.css';
 
 const App = () => {
   return (
@@ -19,9 +20,9 @@ const App = () => {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={statisticalData} />
-      <h2>Friends-List</h2>
+      <h2 className="friend-title">Friends-List</h2>
       <FriendList friends={friends} />
-      <h2>TransactionHistory</h2>
+      <h2 className="transaction-history-title">TransactionHistory</h2>
       <TransactionHistory items={transactions} />;
     </div>
   );
